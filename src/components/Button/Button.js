@@ -6,11 +6,11 @@ const Button = props => {
   let classList = "";
   let types = ["primary", "success", "danger", "warning", "default"];
   if (types.includes(props.type)) {
-    classList += ` button-${props.type}`;
+    classList += ` button-${props.type} button-${props.vari}`;
   }
-  if (props.vari) {
-    classList += ` button-${props.type}`;
-  }
+  // if (props.vari) {
+  //   classList += ` button-${props.vari}`;
+  // }
   if (props.hover) {
     classList += " button-hover";
   }
