@@ -16,6 +16,21 @@ const Button = props => {
       style = { color: `black` };
     }
   }
+  if (props.variation === "faded") {
+    if (types.includes(props.type)) {
+      style = {
+        ...style,
+        border: `var(--${props.type}-color-faded)`,
+        backgroundColor: `var(--${props.type}-color-faded)`
+      };
+    } else {
+      style = {
+        ...style,
+        border: `rgba(34, 38, 42, 0.1)`,
+        backgroundColor: `rgba(34, 38, 42, 0.1)`
+      };
+    }
+  }
   if (props.hover) {
     classList += " button-hover";
   }

@@ -1,8 +1,12 @@
 :root {
   --primary-color: rgb(51, 160, 255);
-  --success-color: #0ad00a;
-  --danger-color: #ff4858;
-  --warning-color: #ffc600;
+  --success-color: rgb(10, 208, 10);
+  --danger-color: rgb(255, 72, 88);
+  --warning-color: rgb(255, 198, 0);
+  --primary-color-faded: rgba(51, 160, 255, 0.1);
+  --success-color-faded: rgba(10, 208, 10, 0.1);
+  --danger-color-faded: rgba(255, 72, 88, 0.1);
+  --warning-color-faded: rgba(255, 198, 0, 0.1);
 }
 button {
   border-radius: 4px;
@@ -10,8 +14,8 @@ button {
   height: 46px;
   padding: 5px 25px;
   color: white;
-  background-color: #22262a;
-  border: #22262a solid 2px;
+  background-color: rgb(34, 38, 42);
+  border: rgb(34, 38, 42) solid 2px;
 }
 
 .button-primary {
@@ -36,9 +40,6 @@ button {
 }
 .button-outline {
   background-color: white;
-}
-.button-faded {
-  background-color: rgba(51, 160, 255, 0.1);
 }
 button:hover {
   filter: brightness(85%);
