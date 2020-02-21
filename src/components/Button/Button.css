@@ -1,0 +1,35 @@
+button {
+  border-radius: 4px;
+  width: 150px;
+  height: 46px;
+  padding: 5px 25px;
+  color: white;
+}
+
+.button-primary {
+  background-color: #33a0ff;
+  border: #33a0ff;
+}
+.button-success {
+  background: #0ad00a;
+  border: #0ad00a;
+}
+.button-danger {
+  background-color: #ff4858;
+  border: #ff4858;
+}
+.button-warning {
+  background-color: #ffc600;
+  border: #ffc600;
+}
+.button-default {
+  background-color: #22262a;
+  border: #22262a;
+}
+.button-large {
+  width: 171px;
+  height: 60px;
+}
+button:hover {
+  filter: brightness(85%);
+}
