@@ -4,16 +4,20 @@ import { storiesOf } from "@storybook/react";
 import Button from "./Button";
 
 let types = ["Primary", "Success", "Danger", "Warning", "Default"];
-let variations = ["", "Large"];
+let sizes = ["", "Large"];
+let variations = ["", "Outline", "Faded"];
 
 variations.forEach(vari => {
-  types.forEach(type => {
-    storiesOf("Button", module).add(type + vari, () => (
-      <Button
-        label={type + vari}
-        type={type.toLowerCase()}
-        vari={vari.toLowerCase()}
-      />
-    ));
+  sizes.forEach(size => {
+    types.forEach(type => {
+      storiesOf("Button", module).add(type + size + vari, () => (
+        <Button
+          label={type + size + vari}
+          type={type.toLowerCase()}
+          size={size.toLowerCase()}
+          variation={vari.toLowerCase()}
+        />
+      ));
+    });
   });
 });

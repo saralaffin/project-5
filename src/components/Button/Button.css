@@ -1,34 +1,44 @@
+:root {
+  --primary-color: rgb(51, 160, 255);
+  --success-color: #0ad00a;
+  --danger-color: #ff4858;
+  --warning-color: #ffc600;
+}
 button {
   border-radius: 4px;
   width: 150px;
   height: 46px;
   padding: 5px 25px;
   color: white;
+  background-color: #22262a;
+  border: #22262a solid 2px;
 }
 
 .button-primary {
-  background-color: #33a0ff;
-  border: #33a0ff;
+  background-color: var(--primary-color);
+  border: var(--primary-color) solid 2px;
 }
 .button-success {
-  background: #0ad00a;
-  border: #0ad00a;
+  background: var(--success-color);
+  border: var(--success-color) solid 2px;
 }
 .button-danger {
-  background-color: #ff4858;
-  border: #ff4858;
+  background-color: var(--danger-color);
+  border: var(--danger-color) solid 2px;
 }
 .button-warning {
-  background-color: #ffc600;
-  border: #ffc600;
-}
-.button-default {
-  background-color: #22262a;
-  border: #22262a;
+  background-color: var(--warning-color);
+  border: var(--warning-color) solid 2px;
 }
 .button-large {
   width: 171px;
   height: 60px;
+}
+.button-outline {
+  background-color: white;
+}
+.button-faded {
+  background-color: rgba(51, 160, 255, 0.1);
 }
 button:hover {
   filter: brightness(85%);
