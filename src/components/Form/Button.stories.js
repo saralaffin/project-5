@@ -2,8 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import Button from "./Button";
-import Cart from "./Cart";
-import Heart from "./Heart";
 
 let types = ["Primary", "Success", "Danger", "Warning", "Default"];
 let sizes = ["", "Large"];
@@ -14,7 +12,7 @@ sizes.forEach(size => {
     types.forEach(type => {
       storiesOf("Button", module).add(type + " " + size + " " + vari, () => (
         <Button
-          label={type + size + vari}
+          label={type + " " + size + " " + vari}
           type={type.toLowerCase()}
           size={size.toLowerCase()}
           variation={vari.toLowerCase()}
@@ -23,20 +21,3 @@ sizes.forEach(size => {
     });
   });
 });
-storiesOf("Button", module)
-  .add("Cart", () => (
-    <Button
-      label="Add to Cart"
-      type="primary"
-      variation="faded"
-      icon={<Cart type="primary" />}
-    />
-  ))
-  .add("Heart", () => (
-    <Button
-      label="Add to Favorites"
-      type="primary"
-      variation="faded"
-      icon={<Cart type="primary" />}
-    />
-  ));

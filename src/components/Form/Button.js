@@ -34,20 +34,11 @@ const Button = props => {
   if (props.hover) {
     classList += " button-hover";
   }
-  if (props.icon) {
-    return (
-      <button className={classList} style={style}>
-        <span>{props.icon}</span>
-        <span>{props.label}</span>
-      </button>
-    );
-  } else {
-    return (
-      <button className={classList} style={style}>
-        {props.label}
-      </button>
-    );
-  }
+  return (
+    <button className={classList} style={style}>
+      {props.label}
+    </button>
+  );
 };
 
 export default Button;
