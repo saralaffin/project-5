@@ -3,11 +3,17 @@ import "./Button.css";
 
 // This is a functional component - just sent up a little differently as an arrow function!
 const Button = props => {
-  let classList = ` button-${props.size} button-${props.variation}`;
+  let classList = "Button";
   let style = {};
   let types = ["primary", "success", "danger", "warning"];
   if (types.includes(props.type)) {
     classList += ` button-${props.type}`;
+  }
+  if (props.size) {
+    classList += ` button-${props.size}`;
+  }
+  if (props.variation) {
+    classList += ` button-${props.variation}`;
   }
   if (props.variation === "outline" || props.variation === "faded") {
     if (types.includes(props.type)) {
@@ -34,18 +40,24 @@ const Button = props => {
   if (props.hover) {
     classList += " button-hover";
   }
-  if (props.icon) {
+  if (props.icon && props.label) {
     return (
-      <button className={classList} style={style}>
+      <div className={classList + " button-icon"} style={style}>
         <span>{props.icon}</span>
         <span>{props.label}</span>
-      </button>
+      </div>
+    );
+  } else if (props.icon && !props.label) {
+    return (
+      <div className={classList + " button-icon"} style={style}>
+        <span>{props.icon}</span>
+      </div>
     );
   } else {
     return (
-      <button className={classList} style={style}>
+      <div className={classList} style={style}>
         {props.label}
-      </button>
+      </div>
     );
   }
 };

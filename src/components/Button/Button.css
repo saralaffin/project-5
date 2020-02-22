@@ -8,15 +8,21 @@
   --danger-color-faded: rgba(255, 72, 88, 0.1);
   --warning-color-faded: rgba(255, 198, 0, 0.1);
 }
-button {
+.Button {
   font-family: Helvetica;
   border-radius: 4px;
-  padding: 14px 30px;
   color: white;
   background-color: rgb(34, 38, 42);
   border: rgb(34, 38, 42) solid 2px;
+  width: fit-content;
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  line-height: 16.8px;
+  font-weight: 400;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 30px;
 }
 .button-primary {
   background-color: var(--primary-color);
@@ -35,11 +41,19 @@ button {
   border: var(--warning-color) solid 2px;
 }
 .button-large {
-  padding: 21px 40px;
+  padding: 16px 32px;
 }
 .button-outline {
   background-color: white;
+  width: fit-content;
 }
-button:hover {
+.button-icon {
+  padding: 5px 10px;
+}
+span {
+  margin: 5px;
+}
+.Button:hover {
+  cursor: pointer;
   filter: brightness(85%);
 }

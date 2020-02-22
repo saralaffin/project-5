@@ -14,7 +14,7 @@ sizes.forEach(size => {
     types.forEach(type => {
       storiesOf("Button", module).add(type + " " + size + " " + vari, () => (
         <Button
-          label={type + size + vari}
+          label="Do Something"
           type={type.toLowerCase()}
           size={size.toLowerCase()}
           variation={vari.toLowerCase()}
@@ -24,19 +24,25 @@ sizes.forEach(size => {
   });
 });
 storiesOf("Button", module)
-  .add("Cart", () => (
+  .add("Add To Cart", () => (
     <Button
-      label="Add to Cart"
+      label="Add To Cart"
       type="primary"
       variation="faded"
       icon={<Cart type="primary" />}
     />
   ))
-  .add("Heart", () => (
+  .add("Add To Favorites", () => (
     <Button
       label="Add to Favorites"
       type="primary"
       variation="faded"
-      icon={<Cart type="primary" />}
+      icon={<Heart type="primary" />}
     />
+  ))
+  .add("Cart icon", () => (
+    <Button type="primary" variation="faded" icon={<Cart type="primary" />} />
+  ))
+  .add("Heart icon", () => (
+    <Button type="primary" variation="faded" icon={<Heart type="primary" />} />
   ));

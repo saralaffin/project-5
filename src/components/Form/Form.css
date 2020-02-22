@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary-color: rgb(51, 160, 255);
   --success-color: rgb(10, 208, 10);
   --danger-color: rgb(255, 72, 88);
@@ -8,7 +8,7 @@
   --danger-color-faded: rgba(255, 72, 88, 0.1);
   --warning-color-faded: rgba(255, 198, 0, 0.1);
 }
-button {
+form {
   font-family: Helvetica;
   border-radius: 4px;
   width: 150px;
@@ -19,29 +19,41 @@ button {
   border: rgb(34, 38, 42) solid 2px;
 }
 
-.button-primary {
+.form-primary {
   background-color: var(--primary-color);
   border: var(--primary-color) solid 2px;
 }
-.button-success {
+.form-success {
   background: var(--success-color);
   border: var(--success-color) solid 2px;
 }
-.button-danger {
+.form-danger {
   background-color: var(--danger-color);
   border: var(--danger-color) solid 2px;
 }
-.button-warning {
+.form-warning {
   background-color: var(--warning-color);
   border: var(--warning-color) solid 2px;
 }
-.button-large {
+.form-large {
   width: 171px;
   height: 60px;
 }
-.button-outline {
+.form-outline {
   background-color: white;
 }
-button:hover {
+form:hover {
   filter: brightness(85%);
+} */
+form {
+  font-family: Helvetica;
+}
+input {
+  padding: 5px;
+}
+.input-medium {
+  padding: 10px;
+}
+.input-large {
+  padding: 15px;
 }
