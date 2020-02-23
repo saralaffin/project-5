@@ -13,14 +13,23 @@ class Counter extends Component {
       <div className="counter">
         <div
           className="counter-button"
-          onClick={() => this.setState({ count: this.state.count - 1 })}
+          onClick={() => {
+            // subtract step from current count in conditional so count doesn't go below min
+            if (this.state.count - this.props.step >= this.props.min) {
+              this.setState({ count: this.state.count - this.props.step });
+            }
+          }}
         >
           -
         </div>
         <p>{this.state.count}</p>
         <div
           className="counter-button"
-          onClick={() => this.setState({ count: this.state.count + 1 })}
+          onClick={() => {
+            if (this.state.count + this.props.step <= this.props.max) {
+              this.setState({ count: this.state.count + this.props.step });
+            }
+          }}
         >
           +
         </div>

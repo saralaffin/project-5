@@ -36,6 +36,6 @@ borders.forEach(border => {
 });
 
 // counter
-storiesOf("Form", module).add("Counterrr", () => (
+storiesOf("Form", module).add("Counter", () => (
   <Counter min={1} max={10} step={2} value={5} />
 ));
