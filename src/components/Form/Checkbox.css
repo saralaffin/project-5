@@ -1,0 +1,28 @@
+:root {
+  --primary-color: rgb(51, 160, 255);
+}
+.Checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox-blue {
+  border: var(--primary-color) solid 2px;
+}
+.checkbox-black {
+  border: solid 2px #22262a;
+}
+svg {
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+}
+.svg-black {
+  background-color: #22262a;
+}
+.svg-blue {
+  background-color: var(--primary-color);
+}
