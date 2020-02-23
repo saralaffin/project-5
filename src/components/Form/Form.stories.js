@@ -2,27 +2,40 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import Form from "./Form";
+import Counter from "./Counter";
 
-let types = ["text", "dropdown", "counter", "text-and-button", "checkbox"];
+let types = ["text", "dropdown"];
+// , "counter", "text-and-button", "checkbox"];
 let sizes = ["", "Medium", "Large"];
-let variations = ["", "Outline", "Faded"];
+let borders = ["", "Border"];
 
-// sizes.forEach(size => {
-//   variations.forEach(vari => {
-//     types.forEach(type => {
-//       storiesOf("Form", module).add(type + " " + size + " " + vari, () => (
-//         <Form
-//           label={type + " " + size + " " + vari}
-//           type={type.toLowerCase()}
-//           size={size.toLowerCase()}
-//           variation={vari.toLowerCase()}
-//         />
-//       ));
-//     });
-//   });
-// });
+// text inputs
 sizes.forEach(size => {
   storiesOf("Form", module).add("Email " + size, () => (
-    <Form placeholder="email" type="text" label="Email" size={size} />
+    <Form
+      placeholder="email"
+      type="text"
+      label="Email"
+      size={size.toLowerCase()}
+    />
   ));
 });
+
+//dropdown menus
+borders.forEach(border => {
+  sizes.forEach(size => {
+    storiesOf("Form", module).add("Dropdown " + size + " " + border, () => (
+      <Form
+        type="dropdown"
+        size={size.toLowerCase()}
+        options={["Select", "a", "b", "c"]}
+        border={border}
+      />
+    ));
+  });
+});
+
+// counter
+storiesOf("Form", module).add("Counterrr", () => (
+  <Counter min={1} max={10} step={2} value={5} />
+));

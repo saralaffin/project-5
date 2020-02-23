@@ -1,14 +1,14 @@
 import React from "react";
 import "./Form.css";
+import Button from "../Button/Button";
 
-// This is a functional component - just sent up a little differently as an arrow function!
 const Form = props => {
   let placeholderText = props.placeholder || props.label;
 
-  let classList = ` Form-${props.size} Form-${props.variation}`;
-  let style = {};
-  let types = ["text", "dropdown", "counter", "text-and-button", "checkbox"];
+  let classList = props.type;
+  // let types = ["text", "dropdown", "counter", "text-and-button", "checkbox"];
 
+  // conditionally add label
   let labelText = () => {
     if (props.label) {
       return (
@@ -22,12 +22,41 @@ const Form = props => {
     }
   };
 
+  // to fill out dropdown menu
+  let options = () => {
+    return props.options.map(option => {
+      return <option>{option}</option>;
+    });
+  };
+
+  if (props.border) {
+    classList += ` dropdown-border`;
+  }
+
   if (props.type === "text") {
     return (
-      <form className={classList} style={style}>
+      <form>
         <p>
           {labelText()}
-          <input type={props.type} placeholder={placeholderText} />
+          <input
+            className={classList + ` text-${props.size}`}
+            type={props.type}
+            placeholder={placeholderText}
+          />
+        </p>
+      </form>
+    );
+  } else if (props.type === "dropdown") {
+    return (
+      <form>
+        <p>
+          {labelText()}
+          <select
+            className={classList + ` dropdown-${props.size}`}
+            type={props.type}
+          >
+            {options()}
+          </select>
         </p>
       </form>
     );
