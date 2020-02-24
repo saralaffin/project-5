@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Component Library
 
-## Available Scripts
+Project 5 in General Assembly SEI35. Given 1.5 class days and a weekend to work on it.
 
-In the project directory, you can run:
+To see my components in Storybook, [click here](https://priceless-colden-8aa16c.netlify.com/?path=/story/button--primary).
 
-### `yarn start`
+## Technologies Used
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+CSS, Javascript, React, JSX, and Storybook
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Approach Taken
 
-### `yarn test`
+Wrote out all componenets and potential CSS classes needed. Added more classes along the way.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Would have done differently/challenges
 
-### `yarn build`
+- When sketching out components, should have psuedo coded what each component might look like
+- Conditionals and classes were hard to keep track of
+- I copied over my Button directory and ran into formatting bugs from the same class showing up in 2 different CSS files.
+- I tried a few different methods for conditional rendering, which makes the code hard to go back and edit.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Unsolved Problems
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Clean up formatting on text input with button
+- Clean up Javascript/React code for readability
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Authors
 
-### `yarn eject`
+Mainly written by Sara Laffin. Help with CSS from my peers and various websites.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Requirements (Given by General Assembly)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You should build out a component library using React and Storybook. Your
+component library should be deployed tto GitHub Pages, Netlify, or Surge and
+published to the NPM Package registry.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Your component library should include all of the components in bouncer.xd mockqup from [this Adobe XD
+mock-up folder](https://drive.google.com/drive/folders/1d89lhVfRE-WTTkVmZ27xcuCBWT0KSBKA?usp=sharing).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Technical Requirements
 
-## Learn More
+Your project should meet the following requirements:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Runs without errors
+- Include the required components in the Adobe XD Mock-up
+- Be deployed to GitHub Pages, Netlify, or Surge
+- Be published to the NPM Package Registry
+- Includes a README written in well formatted Markdown (_hint: look up a README
+  template_)
+- Shows a good commit history with frequent commits. We're looking for lots of
+  small commits.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was created with [Create React App](https://github.com/facebook/create-react-app). A component library was built out and deployed/visualized with [Storybook](https://www.learnstorybook.com/intro-to-storybook/react/en/deploy/).
