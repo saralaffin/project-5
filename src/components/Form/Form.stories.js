@@ -3,11 +3,9 @@ import { storiesOf } from "@storybook/react";
 
 import Form from "./Form";
 import Counter from "./Counter";
-import TextInputWithButton from "./TextInputWithButton";
 import Checkbox from "./Checkbox";
 
-let types = ["text", "dropdown"];
-// , "counter", "text-and-button", "checkbox"];
+//let types = ["text", "dropdown"];
 let sizes = ["", "Medium", "Large"];
 let borders = ["", "Border"];
 
@@ -42,14 +40,30 @@ storiesOf("Form", module).add("Counter", () => (
   <Counter min={1} max={10} step={2} value={5} />
 ));
 //text input with button
-storiesOf("Form", module).add("Text Input with Button", () => (
-  <TextInputWithButton
-    placeholder="Voucher code"
-    buttonText="Redeem"
-    size="large"
-    onSubmit={() => console.log("clicked!")}
-  />
-));
+storiesOf("Form", module)
+  .add("Text Input with Button", () => (
+    <Form
+      type="text"
+      placeholder="Voucher code"
+      buttonText="Redeem"
+      onSubmit={eve => {
+        eve.preventDefault();
+        console.log(eve);
+      }}
+    />
+  ))
+  .add("Text Input with Button Large", () => (
+    <Form
+      type="text"
+      placeholder="Voucher code"
+      buttonText="Redeem"
+      size="large"
+      onSubmit={eve => {
+        eve.preventDefault();
+        console.log(eve);
+      }}
+    />
+  ));
 //checkboxes
 storiesOf("Form", module)
   .add("Checkbox Blue Unchecked", () => <Checkbox color="blue" />)

@@ -42,22 +42,30 @@ const Button = props => {
   }
   if (props.icon && props.label) {
     return (
-      <div className={classList + " button-icon"} style={style}>
+      <button
+        className={classList + " button-icon"}
+        style={style}
+        onClick={props.onClick}
+      >
         <span>{props.icon}</span>
         <span>{props.label}</span>
-      </div>
+      </button>
     );
   } else if (props.icon && !props.label) {
     return (
-      <div className={classList + " button-icon"} style={style}>
+      <button
+        className={classList + " button-icon"}
+        style={style}
+        onClick={props.onClick}
+      >
         <span>{props.icon}</span>
-      </div>
+      </button>
     );
   } else {
     return (
-      <div className={classList} style={style}>
+      <button className={classList} style={style} onClick={props.onClick}>
         {props.label}
-      </div>
+      </button>
     );
   }
 };
