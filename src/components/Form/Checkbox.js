@@ -40,10 +40,20 @@ class Checkbox extends Component {
       return null;
     }
   };
+  displayText = () => {
+    if (this.props.text) {
+      return <p className="checkbox-text">{this.props.text}</p>;
+    } else {
+      return null;
+    }
+  };
   render() {
     return (
-      <div className={this.state.classList} onClick={this.clickHandle}>
-        {this.displaySvg()}
+      <div className="flex">
+        <div className={this.state.classList} onClick={this.clickHandle}>
+          {this.displaySvg()}
+        </div>
+        {this.displayText()}
       </div>
     );
   }
