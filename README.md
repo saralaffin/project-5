@@ -4,6 +4,8 @@ Project 5 in General Assembly SEI35. Given 1.5 class days and a weekend to work 
 
 To see my components in Storybook, [click here](https://priceless-colden-8aa16c.netlify.com/?path=/story/button--primary).
 
+[Here](https://www.npmjs.com/package/@saralaffin/project-5-components) are my components published to the NPM registry. Still figuring that website out, apologies for the bad formatting!
+
 ## Technologies Used
 
 CSS, Javascript, React, JSX, and Storybook
